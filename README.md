@@ -11,7 +11,7 @@ A [Jotai](https://github.com/pmndrs/jotai) like state management library for [Ro
 - Download the `rbxm` model file from the [Github release page]().
 - Insert the model into Roblox Studio into a place like `ReplicatedStorage`
 
-### Method 1: Wally
+### Method 2: Wally
 soon
 
 ## Documentation
