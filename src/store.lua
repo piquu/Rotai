@@ -1,7 +1,7 @@
 local types = require(script.Parent.types)
 local signal = require(script.Parent.signal)
 
-local stores: { [string]: types.Store<number> } = setmetatable({}, {
+local stores = setmetatable({}, {
   __index = function(_, k)
     error(`there is no store for {k}`)
   end,
@@ -12,9 +12,9 @@ local function createStore<Value>(atom: types.Atom<Value>): types.Store<Value>
     atom = atom,
     state = atom.init,
     signal = signal.new(),
-  }
+  } :: types.Store<Value>
 
-  function stores:atomStateChanged()
+  function store:atomStateChanged()
     return self.signal
   end
 
@@ -30,7 +30,7 @@ local function createStore<Value>(atom: types.Atom<Value>): types.Store<Value>
     end, function(value: Value)
       self.state = value
     end, state)
-    self:fireSubscribers(self:getAtomState())
+    self.signal:Fire(self:getAtomState())
   end
 
   stores[tostring(atom)] = store
