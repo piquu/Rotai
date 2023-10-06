@@ -2,7 +2,7 @@
 
 A [Jotai](https://github.com/pmndrs/jotai) like state management library for [Roact](https://github.com/Roblox/roact) and [Roact-Hooks](https://github.com/Kampfkarren/roact-hooks)
 
-> [!WWARNING]
+> [!WARNING]  
 > This library is wip. Breaking changed may occur.
 
 ## Installation
