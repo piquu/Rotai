@@ -14,7 +14,7 @@ local function createStore<Value>(atom: types.Atom<Value>): types.Store<Value>
     signal = signal.new(),
   } :: types.Store<Value>
 
-  function store:atomStateChanged()
+  function store:onAtomStateChange()
     return self.signal
   end
 

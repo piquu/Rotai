@@ -4,8 +4,20 @@
     "$className": "DataModel",
 
     "ReplicatedStorage": {
-      "Rotai": {
-        "$path": "default.project.json"
+      "$path": "example/ReplicatedStorage",
+
+      "Packages": {
+        "$path": "Packages",
+
+        "Rotai": {
+          "$path": "default.project.json"
+        }
+      }
+    },
+
+    "StarterPlayer": {
+      "StarterPlayerScripts": {
+        "$path": "example/StarterPlayerScripts"
       }
     }
   }

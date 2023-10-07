@@ -20,7 +20,7 @@ export type Store<Value> = {
   signal: signal.Signal,
   getAtomState: (self: Store<Value>) -> Value,
   setAtomState: (self: Store<Value>, state: Value) -> (),
-  atomStateChanged: (self: Store<Value>) -> signal.Signal,
+  onAtomStateChange: (self: Store<Value>) -> signal.Signal,
 }
 
 return nil
