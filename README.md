@@ -1,6 +1,6 @@
 # Rotai
 
-A [Jotai](https://github.com/pmndrs/jotai) like state management library for [Roact](https://github.com/Roblox/roact) and [Roact-Hooks](https://github.com/Kampfkarren/roact-hooks)
+A [Jotai](https://github.com/pmndrs/jotai) like state management library for [Roact](https://github.com/Roblox/roact), [Roact Hooks](https://github.com/Kampfkarren/roact-hooks) and [Roact Lua](https://github.com/jsdotlua/react-lua/)
 
 > [!WARNING]  
 > This library is wip. Breaking changed may occur.
@@ -8,16 +8,17 @@ A [Jotai](https://github.com/pmndrs/jotai) like state management library for [Ro
 ## Installation
 
 ### Method 1: File (Roblox Studio)
-- Download the `rbxm` model file from the [Github release page]().
+- Download the `rbxm` model file from the [Github release page](/releases).
 - Insert the model into Roblox Studio into a place like `ReplicatedStorage`
 
 ### Method 2: Wally
 soon
 
-## Documentation
-soon
+## Todo
+- [ ] add support for vanilla roblox
+- [ ] add support for [react lua](https://github.com/jsdotlua/react-lua/)
 
-## API Reference
+## Documentation
 soon
 
 ## License
