@@ -12,7 +12,10 @@ A [Jotai](https://github.com/pmndrs/jotai) like state management library for [Ro
 - Insert the model into Roblox Studio into a place like `ReplicatedStorage`
 
 ### Method 2: Wally
-soon
+- Add this like to your `wally.toml` file
+```toml
+rotai = "piquu/rotai@0.1.0"
+```
 
 ## Todo
 - [ ] add support for vanilla roblox
