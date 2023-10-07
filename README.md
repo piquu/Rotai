@@ -8,7 +8,7 @@ A [Jotai](https://github.com/pmndrs/jotai) like state management library for [Ro
 ## Installation
 
 ### Method 1: File (Roblox Studio)
-- Download the `rbxm` model file from the [Github release page](/releases).
+- Download the `rbxm` model file from the [Github release page]().
 - Insert the model into Roblox Studio into a place like `ReplicatedStorage`
 
 ### Method 2: Wally
