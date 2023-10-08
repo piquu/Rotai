@@ -3,7 +3,7 @@
 A [Jotai](https://github.com/pmndrs/jotai) like state management library for [Roact](https://github.com/Roblox/roact), [Roact Hooks](https://github.com/Kampfkarren/roact-hooks) and [React Lua](https://github.com/jsdotlua/react-lua/)
 
 > [!WARNING]  
-> This library is wip. Breaking changed may occur.
+> This library is wip. Breaking changes may occur.
 
 ## Installation
 
