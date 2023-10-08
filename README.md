@@ -32,7 +32,7 @@ local Component = require(path.to.component)
 
 local atom = Rotai.atom(0)
 
-local app = Roact.createElement(Rotai.roact.Provider(Roact), {
+local app = Roact.createElement(Rotai.Roact.Provider(Roact), {
 	store = atom,
 }, {
 	Roact.createElement('ScreenGui', nil, {
@@ -50,7 +50,7 @@ local Rotai = require(path.to.rotai)
 local Component = Roact.Component:extend('Component')
 
 function Component:init()
-	self.count, self.setCount = Rotai.roact.useAtom(self)
+	self.count, self.setCount = Rotai.Roact.useAtom(self)
 end
 
 function Component:render()
