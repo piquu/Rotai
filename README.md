@@ -20,7 +20,8 @@ rotai = "piquu/rotai@0.1.0"
 ## Todo
 - [x] Add support for [react lua](https://github.com/jsdotlua/react-lua/)
 - [ ] Write better [Documentation](/Documentation.md)
-- [ ] Optimize `useAtom` for Roact
+- [x] Optimize `useAtom` for Roact
+- [ ] Add support for [Roblox Ts](https://roblox-ts.com/)
 
 ## [Documentation](/Documentation.md)
 ```lua
