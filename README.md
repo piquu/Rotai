@@ -18,8 +18,9 @@ rotai = "piquu/rotai@0.1.0"
 ```
 
 ## Todo
-- [ ] Add support for [react lua](https://github.com/jsdotlua/react-lua/)
+- [x] Add support for [react lua](https://github.com/jsdotlua/react-lua/)
 - [ ] Write better [Documentation](/Documentation.md)
+- [ ] Optimize `useAtom` for Roact
 
 ## [Documentation](/Documentation.md)
 ```lua
