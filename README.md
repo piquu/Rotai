@@ -18,7 +18,6 @@ rotai = "piquu/rotai@0.1.0"
 ```
 
 ## Todo
-- [ ] Add support for Vanilla Roblox
 - [ ] Add support for [react lua](https://github.com/jsdotlua/react-lua/)
 - [ ] Write better [Documentation](/Documentation.md)
 

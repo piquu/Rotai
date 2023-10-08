@@ -2,15 +2,16 @@ local types = require(script.Parent.types)
 
 local keyCount = 0 -- global key count for all atoms
 
-local function atom<Value>(initialValue: Value, read: types.Read<Value>?, write: types.Write<Value>?)
+local function atom<T>(initialValue: T,read: types.Read<T>?, write: types.Write<T>?)
   keyCount += 1
   local key = `atom{keyCount}`
 
-  read = read or function(get: types.Getter<Value>)
+  read = read or function(get: types.Getter<T>)
     return get()
   end
 
-  write = write or function(_get: types.Getter<Value>, set: types.Setter<Value>, value: Value)
+  write = write or function(get: types.Getter<T>, set: types.Setter<T>, value: T)
+    if value == get() then return end
     set(value)
   end
 

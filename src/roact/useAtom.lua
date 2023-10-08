@@ -4,7 +4,7 @@ local store = require(script.Parent.Parent.store)
 local function useAtom<T>(Component, Atom: types.Atom<T>?)
   local Store = store.getDefaultStore(Atom or Component.props.Atom)
 
-  Store:onAtomStateChange():Connect(function()
+  Store:onAtomStateChange(function()
     Component:setState({})
   end)
 

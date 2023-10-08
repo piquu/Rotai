@@ -6,7 +6,7 @@ local atom = require(game.ReplicatedStorage.Atom)
 local RoactComponent = require(game.ReplicatedStorage.Components.Roact)
 local RoactHooksComponent = require(game.ReplicatedStorage.Components.RoactHooks)
 
-local app = Roact.createElement(Rotai.roact.Provider(Roact), {
+local app = Roact.createElement(Rotai.Roact.Provider(Roact), {
 	store = atom,
 }, {
 	Roact.createElement('ScreenGui', {

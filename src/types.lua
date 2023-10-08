@@ -1,26 +1,26 @@
 local signal = require(script.Parent.signal)
 
-export type Getter<Value> = () -> Value
+export type Getter<T> = () -> T
 
-export type Setter<Value> = (Value: Value) -> ()
+export type Setter<T> = (Value: T) -> ()
 
-export type Read<Value> = (get: Getter<Value>) -> Value
+export type Read<T> = (get: Getter<T>) -> T
 
-export type Write<Value> = (get: Getter<Value>, set: Setter<Value>, value: Value) -> ()
+export type Write<T> = (get: Getter<T>, set: Setter<T>, value: T) -> ()
 
-export type Atom<Value> = {
-  init: Value,
-  read: Read<Value>,
-  write: Write<Value>,
+export type Atom<T> = {
+  init: T,
+  read: Read<T>,
+  write: Write<T>,
 }
 
-export type Store<Value> = {
-  atom: Atom<Value>,
-  state: Value,
+export type Store<T> = {
+  atom: Atom<T>,
+  state: T,
   signal: signal.Signal,
-  getAtomState: (self: Store<Value>) -> Value,
-  setAtomState: (self: Store<Value>, state: Value) -> (),
-  onAtomStateChange: (self: Store<Value>) -> signal.Signal,
+  getAtomState: (self: Store<T>) -> T,
+  setAtomState: (self: Store<T>, state: T) -> (),
+  onAtomStateChange: (self: Store<T>, fn: (value: T) -> ()) -> signal.Connection,
 }
 
 return nil

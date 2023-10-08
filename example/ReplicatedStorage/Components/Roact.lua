@@ -4,7 +4,7 @@ local Rotai = require(game.ReplicatedStorage.Packages.Rotai)
 local Component = Roact.Component:extend('Component')
 
 function Component:init()
-	self.value, self.setValue = Rotai.roact.useAtom(self)
+	self.value, self.setValue = Rotai.Roact.useAtom(self)
 end
 
 function Component:render()
@@ -19,4 +19,4 @@ function Component:render()
 	})
 end
 
-return Rotai.roact.Consumer(Roact)(Component)
+return Rotai.Roact.Consumer(Roact)(Component)

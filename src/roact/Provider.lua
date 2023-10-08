@@ -1,12 +1,10 @@
 local function Provider(Roact)
   local Context = require(script.Parent.Context)(Roact)
 
-  local Component = Roact.Component:extend('Provider')
-
-  function Component:render()
+  local function Component(props)
     return Roact.createElement(Context.Provider, {
-      value = self.props.store,
-    }, Roact.oneChild(self.props[Roact.Children]))
+      value = props.store,
+    }, Roact.oneChild(props[Roact.Children]))
   end
 
   return Component

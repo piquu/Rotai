@@ -7,37 +7,39 @@ local stores = setmetatable({}, {
   end,
 })
 
-local function createStore<Value>(atom: types.Atom<Value>): types.Store<Value>
+local function createStore<T>(atom: types.Atom<T>): types.Store<T>
   local store = {
     atom = atom,
     state = atom.init,
     signal = signal.new(),
-  } :: types.Store<Value>
+  } :: types.Store<T>
 
-  function store:onAtomStateChange()
-    return self.signal
+  local function get()
+    return store.state
   end
 
-  function store:getAtomState(): Value
-    return self.atom.read(function()
-      return self.state
-    end)
+  local function set(value: T)
+    store.state = value
   end
 
-  function store:setAtomState(state: Value)
-    self.atom.write(function()
-      return self.state
-    end, function(value: Value)
-      self.state = value
-    end, state)
+  function store:getAtomState(): T
+    return self.atom.read(get)
+  end
+
+  function store:setAtomState(state: T)
+    self.atom.write(get, set, state)
     self.signal:Fire(self:getAtomState())
+  end
+
+  function store:onAtomStateChange(fn: (value: T) -> ()): signal.Connection
+    return self.signal:Connect(fn)
   end
 
   stores[tostring(atom)] = store
   return stores[tostring(atom)]
 end
 
-local function getDefaultStore<Value>(atom): types.Store<Value>
+local function getDefaultStore<T>(atom): types.Store<T>
   local store
 
   local success, response = pcall(function()
