@@ -10,9 +10,9 @@ local function atom<T>(initialValue: T,read: types.Read<T>?, write: types.Write<
     return get()
   end
 
-  write = write or function(get: types.Getter<T>, set: types.Setter<T>, value: T)
-    if value == get() then return end
-    set(value)
+  write = write or function(get: types.Getter<T>, set: types.Setter<T>, update: types.Update<T>)
+    if update.value == get() then return end
+    set(update.value)
   end
 
   local config = setmetatable({

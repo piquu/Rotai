@@ -9,7 +9,7 @@ local function Component()
 		Position = UDim2.new(.8, 0, .5, 0),
     Text = value,
     [React.Event.Activated] = function()
-      setValue('React Lua')
+      setValue({ value = 'React Lua' })
     end,
   })
 end

@@ -26,7 +26,8 @@ local function createStore<T>(atom: types.Atom<T>): types.Store<T>
     return self.atom.read(get)
   end
 
-  function store:setAtomState(state: T)
+  function store:setAtomState(state: T | types.Update<T>)
+    state = type(state) == 'table' and state or { value = state }
     self.atom.write(get, set, state)
     self.signal:Fire(self:getAtomState())
   end
