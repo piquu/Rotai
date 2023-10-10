@@ -1,0 +1,20 @@
+{
+  "name": "example",
+  "tree": {
+    "$className": "DataModel",
+
+    "ReplicatedStorage": {
+      "$path": "src/shared",
+
+      "Packages": {
+        "$path": "Packages"
+      }
+    },
+
+    "StarterPlayer": {
+      "StarterPlayerScripts": {
+        "$path": "src/client"
+      }
+    }
+  }
+}

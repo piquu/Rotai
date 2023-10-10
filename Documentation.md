@@ -1,3 +1,0 @@
-# Rotai Documentation 
-
-wip

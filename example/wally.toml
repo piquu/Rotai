@@ -1,0 +1,17 @@
+[package]
+name = "piqu/example"
+version = "0.1.0"
+registry = "https://github.com/UpliftGames/wally-index"
+realm = "shared"
+
+[dependencies]
+rotai = "piquu/rotai@0.1.4"
+rotai-react = "piquu/rotai-react@0.1.2"
+rotai-roact = "piquu/rotai-roact@0.1.1"
+rotai-roact-hooks = "piquu/rotai-roact-hooks@0.1.5"
+
+react = "jsdotlua/react@17.0.2"
+react-roblox = "jsdotlua/react-roblox@17.0.2"
+
+roact = "roblox/roact@1.4.4"
+roact-hooks = "kampfkarren/roact-hooks@0.5.1"
