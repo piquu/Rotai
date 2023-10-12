@@ -34,11 +34,11 @@ export type Store<T> = {
   state: T,
   signal: signal.Signal,
   -- getAtomState: GetAtomState<T>,
-  getAtomState: (self: Store<T>) -> T,
+  get: (self: Store<T>) -> T,
   -- setAtomState: SetAtomState<T>,
-  setAtomState: (self: Store<T>, state: Update<T>) -> (),
+  set: (self: Store<T>, state: Update<T>) -> (),
   -- onAtomStateChange: OnAtomStateChange<T>,
-  onAtomStateChange: (self: Store<T>, fn: (value: T) -> ()) -> signal.Connection,
+  sub: (self: Store<T>, fn: (value: T) -> ()) -> signal.Connection,
 }
 
 return nil

@@ -7,7 +7,15 @@
       "$path": "src/shared",
 
       "Packages": {
-        "$path": "Packages"
+        "$path": "Packages",
+
+        "rotai": {
+          "$path": "../rotai/default.project.json"
+        },
+
+        "rotaireact": {
+          "$path": "../react/default.project.json"
+        }
       }
     },
 

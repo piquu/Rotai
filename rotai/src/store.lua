@@ -22,17 +22,17 @@ local function createStore<T>(atom: types.Atom<T>): types.Store<T>
     store.state = value
   end
 
-  function store:getAtomState(): T
+  function store:get(): T
     return self.atom.read(get)
   end
 
-  function store:setAtomState(state: T | types.Update<T>)
+  function store:set(state: T | types.Update<T>)
     state = type(state) == 'table' and state or { value = state }
     self.atom.write(get, set, state)
-    self.signal:Fire(self:getAtomState())
+    self.signal:Fire(self:get())
   end
 
-  function store:onAtomStateChange(fn: (value: T) -> ()): signal.Connection
+  function store:sub(fn: (value: T) -> ()): signal.Connection
     return self.signal:Connect(fn)
   end
 

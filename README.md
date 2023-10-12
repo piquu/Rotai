@@ -20,11 +20,5 @@ rotai = "piquu/rotai@0.1.4"
 ## [Documentation](example)
 soon. For now [example](example)
 
-## todo
-- [x] add support for [react lua](https://github.com/jsdotlua/react-lua/)
-- [ ] write better documentation
-- [x] optimize `useatom` for roact
-- [ ] add support for [roblox ts](https://roblox-ts.com/)
-
 ## License
 Rotai is available under the MIT license. See [LICENSE](LICENSE) for details.
