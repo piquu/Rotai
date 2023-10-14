@@ -15,6 +15,28 @@
 
 -- return useAtom
 
+local Rotai = require(script.Parent.rotai)
+local Context = require(script.Parent.context)
+
 local function useAtom(hooks, Atom: any?)
-  Atom = Atom or hooks.useContext()
+  Atom = Atom or hooks.useContext(Context)
+  local Store = Rotai.store.getDefaultStore(Atom)
+
+  local state, setState = hooks.useState(function()
+    return Store:get()
+  end)
+
+  hooks.useEffect(function()
+    local Connection = Store:sub(setState)
+
+    return function()
+      Connection:Disconnect()
+    end
+  end)
+
+  return state, function(value)
+    Store:set(value)
+  end
 end
+
+return useAtom

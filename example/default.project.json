@@ -19,6 +19,10 @@
 
         "rotairoact": {
           "$path": "../roact/default.project.json"
+        },
+
+        "rotairoacthooks": {
+          "$path": "../roacthooks/default.project.json"
         }
       }
     },
