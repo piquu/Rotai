@@ -1,9 +1,25 @@
-local types = require(script.Parent.types)
-local useAtomValue = require(script.Parent.useAtomValue)
-local useSetAtom = require(script.Parent.useSetAtom)
+local Rotai = require(script.Parent.rotai)
 
-local function useAtom<T>(Component, Atom: types.Atom<T>?)
-  return useAtomValue(Component, Atom), useSetAtom(Component, Atom)
+local function useAtom(Component, Atom: any?)
+  Atom = Atom or Component.props.Atom
+  local Store = Rotai.store.getDefaultStore(Atom)
+
+  local state = Store:get()
+
+  Store:sub(function(value)
+    state = value
+    Component:setState({})
+  end)
+
+  local function setValue(value)
+    Store:set(value)
+  end
+
+  local function value()
+    return state
+  end
+
+  return value, setValue
 end
 
 return useAtom

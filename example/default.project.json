@@ -15,6 +15,10 @@
 
         "rotaireact": {
           "$path": "../react/default.project.json"
+        },
+
+        "rotairoact": {
+          "$path": "../roact/default.project.json"
         }
       }
     },

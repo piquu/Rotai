@@ -1,11 +1,5 @@
-local RoactContext
+local React = require(script.Parent.roact)
 
-local function Context(Roact)
-  if not RoactContext then
-    RoactContext = Roact.createContext()
-  end
-
-  return RoactContext
-end
+local Context = React.createContext()
 
 return Context
