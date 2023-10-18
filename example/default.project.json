@@ -23,6 +23,10 @@
 
         "rotairoacthooks": {
           "$path": "../roacthooks/default.project.json"
+        },
+
+        "rotaifusion": {
+          "$path": "../fusion/default.project.json"
         }
       }
     },
