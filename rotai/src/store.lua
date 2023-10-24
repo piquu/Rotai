@@ -32,8 +32,8 @@ local function createStore<T>(atom: types.Atom<T>): types.Store<T>
     self.signal:Fire(self:get())
   end
 
-  function store:sub(fn: (value: T) -> ()): signal.Connection
-    return self.signal:Connect(fn)
+  function store:sub(fn: (value: T, ...any) -> (), ...: any): signal.Connection
+    return self.signal:Connect(fn, ...)
   end
 
   stores[tostring(atom)] = store

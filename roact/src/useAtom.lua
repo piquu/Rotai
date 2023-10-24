@@ -1,4 +1,4 @@
-local Rotai = require(script.Parent.rotai)
+local Rotai = require(script.Parent.Parent.rotai)
 
 local function useAtom(Component, Atom: any?)
   Atom = Atom or Component.props.Atom

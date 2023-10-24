@@ -1,5 +1,5 @@
-local Rotai = require(script.Parent.rotai)
-local Fusion = require(script.Parent.fusion)
+local Rotai = require(script.Parent.Parent.rotai)
+local Fusion = script.Parent.Parent._Index['elttob_fusion@0.2.0']['fusion']
 local updateAll = require(Fusion.Dependencies.updateAll)
 
 local Value = {}

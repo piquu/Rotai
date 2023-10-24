@@ -1,7 +1,9 @@
 [package]
 name = "piquu/rotai-fusion"
-version = "0.1.0"
+version = "0.1.1"
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
 
 [dependencies]
+rotai = "piquu/rotai@0.1.6"
+fusion = "elttob/fusion@0.2.0"

@@ -11,7 +11,7 @@
 -- end
 
 -- return Provider
-local React = require(script.Parent.react)
+local React = require(script.Parent.Parent.react)
 local Context = require(script.Parent.Context)
 
 local function Provider(props)

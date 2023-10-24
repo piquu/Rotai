@@ -1,7 +1,9 @@
 [package]
 name = "piquu/rotai-react"
-version = "0.1.5"
+version = "0.1.6"
 registry = "https://github.com/UpliftGames/wally-index"
 realm = "shared"
 
 [dependencies]
+rotai = "piquu/rotai@0.1.6"
+react = "jsdotlua/react@17.0.2"

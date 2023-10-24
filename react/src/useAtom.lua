@@ -1,8 +1,8 @@
-local React = require(script.Parent.react)
-local Rotai = require(script.Parent.rotai)
+local React = require(script.Parent.Parent.react)
+local Rotai = require(script.Parent.Parent.rotai)
 local Context = require(script.Parent.Context)
 
-local function useAtom(Atom: any?)
+local function useAtom<T>(Atom: any?)
   Atom = Atom or React.useContext(Context)
   local Store = Rotai.store.getDefaultStore(Atom)
 
